@@ -1,25 +1,11 @@
 <script setup>
 
-const bgOrange = "bg-orange-500"
-const bgIndigo = "bg-indigo-800"
-const bgGreen = "bg-green-500"
+  import {ref} from 'vue'
+  const location = ref("Dhaka")
 
-const weekday = true
-
-
-const colors = {
-  bgColor: 'bg-teal-100',
-  borderColor: 'border-teal-500',
-  textColor: 'text-teal-900'
-}
-
-const messageType = 'error'
-
-if('error'==messageType){
-  colors.bgColor = 'bg-red-100'
-  colors.borderColor = 'border-red-900'
-  colors.textColor = 'text-red-900'
-}
+  function changeLocation(newLocation){
+    location.value = newLocation
+  }
 
 </script>
 
@@ -27,32 +13,20 @@ if('error'==messageType){
 
 <section class="text-gray-600 body-font bg-white">
   <div class="container px-5 py-24 mx-auto">
-   
-    <span class="px-4 py-2  text-base rounded-full text-white" :class="bgOrange">
-    Hello
-  </span>
+    <div class="flex flex-wrap -m-4">
+      <button class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0" @click="changeLocation('Dhaka')">
+        Dhaka
+      </button>
+      <br>
+      <button class="ml-3 flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0" @click="changeLocation('Faridput')">
+        Faridpur
+      </button>
 
-    <span class="px-4 py-2  text-base rounded-full text-white mx-4" :class="bgIndigo">
-    Hello
-  </span>
-
-    <span class="px-4 py-2  text-base rounded-full text-white  bg-indigo-500 " :class="bgGreen">
-    Hello
-  </span>
-
-  </div>
-
-<div class="pb-5">
-  <span class="px-20 mb-5 pb=5 py-2  text-base rounded-full text-white  bg-indigo-500 " :class="[weekday?'bg-red-600':'bg-green-600', weekday==true?'text-2xl':'text-4xl']">
-    It's a weekday
-  </span>
-</div>
-</section>
-
-<section class="mt-5">
-  <div class="border-t-4 rounded-b px-4 py-3 shadow-md" :class="[colors.bgColor, colors.borderColor,colors.textColor]">
-    <p class="font-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, at!</p>
-    <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, at!</p>
+      <button class="ml-3 flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0" @click="changeLocation('Khulna')">
+        Khulna
+      </button>
+    </div>
+    <h1 class="text-2xl d-block mt-5 pt-5 text-black">{{ location }}</h1>
   </div>
 </section>
 
