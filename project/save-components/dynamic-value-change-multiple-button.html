@@ -1,0 +1,38 @@
+<script setup>
+
+    import {ref} from 'vue'
+    const location = ref("Dhaka")
+  
+    function changeLocation(newLocation){
+      location.value = newLocation
+    }
+  
+  </script>
+  
+  <template>
+  
+  <section class="text-gray-600 body-font bg-white">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <button class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0" @click="changeLocation('Dhaka')">
+          Dhaka
+        </button>
+        <br>
+        <button class="ml-3 flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0" @click="changeLocation('Faridput')">
+          Faridpur
+        </button>
+  
+        <button class="ml-3 flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0" @click="changeLocation('Khulna')">
+          Khulna
+        </button>
+      </div>
+      <h1 class="text-2xl d-block mt-5 pt-5 text-black">{{ location }}</h1>
+    </div>
+  </section>
+  
+  </template>
+  
+  <style scoped>
+  
+  </style>
+  
