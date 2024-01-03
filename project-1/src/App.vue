@@ -1,21 +1,15 @@
 <script setup>
 
-  // Import blog component
-  import BlogComponent from './components/BlogComponent.vue';
-  // End
-
-   // Import text bind component
-   import TextBindInput from './components/TextBindInput.vue';
   //  End
+  import Home from './components/Home.vue';
+  import Nav from './components/Nav.vue';
 
 </script>
 
 <template>
 
-  <!-- All Component -->
- 
-  <BlogComponent/>
-  <TextBindInput />
+  <Nav></Nav>
+  <Home></Home>
 
   <!-- End -->
 </template>
