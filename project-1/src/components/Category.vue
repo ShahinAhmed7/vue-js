@@ -10,7 +10,9 @@
                 <div class="h-full flex items-start">
                     <div class="flex-grow pl-6">
                         <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">CATEGORY</h2>
-                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Foods</h1>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">
+                            <router-link :to="{name:'tag', params:{tag: 'travel'}}">Travel</router-link>
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -18,7 +20,7 @@
                 <div class="h-full flex items-start">
                     <div class="flex-grow pl-6">
                         <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">CATEGORY</h2>
-                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Milk</h1>
+                        <router-link :to="{name:'tag', params:{tag: 'food'}}">Food</router-link>
                     </div>
                 </div>
             </div>
@@ -26,7 +28,7 @@
                 <div class="h-full flex items-start">
                     <div class="flex-grow pl-6">
                         <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">CATEGORY</h2>
-                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Photos</h1>
+                        <router-link :to="{name:'tag', params:{tag: 'music'}}">Music</router-link>
                     </div>
                 </div>
             </div>

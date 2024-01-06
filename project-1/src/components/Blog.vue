@@ -2,6 +2,14 @@
 <script setup>
 import {data} from '../data/data.js'
 
+
+// This import for Category
+import {ref} from 'vue'
+import {useRoute} from 'vue-router'
+const route = useRoute()
+const tag = ref(route.params.tag)
+// End
+
 </script>
 
 <template>
@@ -13,7 +21,7 @@ import {data} from '../data/data.js'
             <img :title="data.title" class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" :src="data.mainImg">
 
             <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
-                <p class="text-sm text-blue-500 uppercase">{{ data.category }}</p>
+                <p class="text-sm text-blue-500 uppercase">{{ tag }}</p>
 
                 <a :href="data.buttonLink" href="#" class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white">
                     {{ data.subTitle }}
